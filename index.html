@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>NYC Subway Data and Styles for MapboxGL</title>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    html, body, #mapContainer {
+      height: 100%;
+      margin: 0;
+    }
+
+    #overlay {
+      font-family: sans-serif;
+      position: absolute;
+      z-index: 1;
+      top: 10px;
+      left: 10px;
+      background: #ccc;
+      padding: 15px;
+      border-radius: 5px;
+      max-width: 400px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="overlay">
+    <h3>NYC Subway Data and Layers for mapboxGL</h3>
+    <p>These styles are zoom-dependent, and the lines will become larger as you zoom in.  The subway stops and their labels will also appear at higher zoom levels. Feel free to use these styles in your next NYC mapboxGL project</p>
+    <p>For sourcing info, see the readme on <a href="https://github.com/chriswhong/mapboxgl-nyc-subway">Github</a></p>
+  </div>
+  <div id='mapContainer'></div>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+  <script src="js/subway-layer-styles.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
